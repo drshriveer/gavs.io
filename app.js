@@ -14,18 +14,13 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.favicon());
 
 // Mount statics
-app.use(express.static(path.join(__dirname, '../.tmp')));
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '/.tmp')));
+app.use(express.static(path.join(__dirname, '/client')));
 
 // Route index.html
 app.get('/', function(req, res) {
-  res.sendfile(path.join(__dirname, '../client/index.html'));
+  res.sendfile(path.join(__dirname, '/client/index.html'));
 });
-// Route image files
-// app.get('/images/', function(req, res) {
-//   console.log('image req',req);
-//   res.sendfile(path.join(__dirname, '../client/images'));
-// });
 
 // Start server
 http.createServer(app).listen(app.get('port'), function() {

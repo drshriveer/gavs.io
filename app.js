@@ -11,7 +11,6 @@ var app = express();
 
 // Configure server
 app.set('port', process.env.PORT || 3000);
-app.use(express.favicon());
 
 // Mount statics
 app.use(express.static(path.join(__dirname, '/.tmp')));

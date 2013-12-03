@@ -11,7 +11,7 @@ var app = express();
 
 // Configure server
 app.set('port', process.env.PORT || 3000);
-app.use(express.favicon("client/images/favicon.ico")); 
+app.use(express.favicon(__dirname + "/client/images/favicon.ico")); 
 
 
 // Mount statics

@@ -2,7 +2,6 @@
 
 // Module dependencies
 var express = require('express');
-var colors = require('colors');
 var http = require('http');
 var path = require('path');
 
@@ -11,7 +10,7 @@ var app = express();
 
 // Configure server
 app.set('port', process.env.PORT || 3000);
-app.use(express.favicon(path.join(__dirname, '/client/images/favicon.ico'))); 
+app.use(express.favicon(path.join(__dirname, '/client/favicon.ico'))); 
 
 
 // Mount statics
@@ -26,7 +25,7 @@ app.get('/', function(req, res) {
 // Start server
 http.createServer(app).listen(app.get('port'), function() {
   console.log(
-    'Express server listening on port '.green + app.get('port'),
-    '\nPress Ctrl+C to shutdown'.grey
+    'Express server listening on port ' + app.get('port'),
+    '\nPress Ctrl+C to shutdown'
   );
 });

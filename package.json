@@ -1,7 +1,7 @@
 {
   "name": "gavs.io",
   "version": "0.0.1",
-  "description": "\"Markup-based A/B testing\"",
+  "description": "\"Gavin Shriver's website\"",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
